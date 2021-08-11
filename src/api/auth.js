@@ -1,5 +1,7 @@
 import axios from "@/api/axios";
 
+
+
 const register = credentials => {
     return axios.post('/users', {user: credentials})
 }
@@ -15,5 +17,6 @@ const getCurrentUser = () => {
 export default {
     register,
     login,
-    getCurrentUser
+    getCurrentUser,
+
 }
