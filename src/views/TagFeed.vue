@@ -25,10 +25,12 @@ export default {
     McvPopularTags,
     McvBanner,
   },
-  data() {
-    return {
-      apiUrl: '/articles',
-    }
+  computed: {
+    apiUrl() {
+      const tagName = this.$route.params.slug
+      console.log('tagName', tagName)
+      return `/articles?tag=${tagName}`
+    },
   },
 }
 </script>
